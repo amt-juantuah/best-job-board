@@ -24,6 +24,8 @@
     --button-radius: 5px;
     --button-width: 141px;
     --button-height: 48px;
+
+    --border-radius-1: 5px;
 }
 
 * {
@@ -436,7 +438,7 @@ footer {
 }
 
 .theme-toggler {
-    background: var(--color-light);
+    background: #2323235c;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -456,8 +458,10 @@ footer {
 }
 
 .theme-toggler span.active{
-    background: var(--color-primary);
+    background: var(--color-light-grey);
     color: white;
-    border-radius:var(--border-radius-1)
+    border-radius:var(--border-radius-1);
+    outline: 2px solid white;
+    border: 1px solid white;
 }
 
