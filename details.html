@@ -23,7 +23,7 @@
                     <span class="material-icons-sharp">dark_mode</span>
                 </div>
             </div>
-                <div class="header-detail flex-row space-btw">
+                <div class="mob-mob header-detail flex-row space-btw">
                     <div class="side-by-side flex-row">
                         <div class="flex all-center" id="detail-logo"><img id="detail-pic"></div>
                         <div class="detail-comp-detail flex-col">
@@ -35,7 +35,7 @@
                 </div>
         </div>
     </section>
-    <main class="flex-col">
+    <main class="mob-mob flex-col">
         <section id="detail-container">
             <!------------------ To be replaced ------------------->
             <!-- <div id="detail-covering-card" class="detail-covering-card">
@@ -72,7 +72,7 @@
         let content = `
                         <div id="detail-covering-card" class="detail-covering-card">
                             <div class="detail-card space-btw flex-col">
-                                <div class="flex-row space-btw aln-center">
+                                <div class="mob-mob flex-row space-btw aln-center">
                                     <div>
                                         <div class="post-det space-btw flex-col">
                                             <div class="time-and-type">
@@ -82,11 +82,11 @@
                                                 </svg>
                                                 <span id="jobType" >${response.contract}</span>
                                             </div>
-                                            <h2 id="jobTitle" >${response.position}</h2>
+                                            <h2 class="mob-mob" id="jobTitle" >${response.position}</h2>
                                             <p class="small" id="jobLocation">${response.location}</p>
                                         </div>
                                     </div>
-                                    <a href="${response.website}" target="_blank"><button>Apply Now</button></a>
+                                    <a href="${response.website}" target="_blank"><button class="mob-mob">Apply Now</button></a>
                                 </div>
                                 <p class="mg-t-28">${response.description}</p>
                                 <div class="mg-t-28">
@@ -110,7 +110,7 @@
                     `;
         let footerContent = `
                         <div class="below-details flex-row space-btw aln-center">
-                            <div>
+                            <div class="mob-hidd">
                                 <h2 id="jobTitle" >${response.position}</h2>
                                 <p class="" id="jobLocation">${response.location}</p>
                             </div>
