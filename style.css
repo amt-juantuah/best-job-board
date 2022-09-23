@@ -471,6 +471,11 @@ footer {
     display: none;
 }
 
+button:disabled {
+    background-color: var(--color-light-violet);
+    cursor: not-allowed;
+    color: red;
+}
 /* --------Tablet View-------- */
 
 @media screen and (max-width: 1100px) {
