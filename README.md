@@ -1,3 +1,3 @@
 # best-job-board
 
-![alt]("./assets/screenshots/light-desktop.png")
+<img src="./assets/screenshots/light-desktop.png">
