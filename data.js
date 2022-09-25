@@ -1,4 +1,20 @@
-let jobs = [
+export function jobData() {
+  return jobs;
+}
+
+
+export function themeWorker(themeToggler) {
+  document.body.classList.toggle("dark-theme-variables");
+  themeToggler.querySelector("span:nth-child(1)").classList.toggle("active");
+  themeToggler.querySelector("span:nth-child(2)").classList.toggle("active");
+  if (document.body.className === "dark-theme-variables") {
+    localStorage.setItem("dark", "dark-theme-variables");
+  } else {
+    localStorage.setItem("dark", "");
+  }
+}
+
+const jobs = [
   {
     "id": 1,
     "company": "Scoot",

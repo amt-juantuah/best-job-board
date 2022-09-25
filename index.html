@@ -87,7 +87,7 @@
         (async () => {
             try {
                 let content = (response, i) => { return `
-                        <a onclick='sendLocal(${JSON.stringify(response[i])})' id="covering-card" class="covering-card">
+                        <a onclick='sendLocal(${response[i].id})' id="covering-card" class="covering-card">
                             <div id="joblogo" class="logo flex all-center" style="background-color:${response[i].logoBackground}">
                                 <img src="${response[i].logo}">
                             </div>
@@ -132,7 +132,6 @@
                     if (filter1.trim() || filter2.trim() || filter3) {
                         e.preventDefault();
                         filters = setValues(filter1, filter2, filter3);
-                        console.log("value of filters:", filters)
                         container.innerHTML = "";
 
                         // Full time only checked
@@ -244,9 +243,9 @@
         })();
     </script>
     <script>
-        const sendLocal = (data) => {
-            if (data) {
-                localStorage.setItem("data", JSON.stringify(data));
+        const sendLocal = (ID) => {
+            if (ID) {
+                localStorage.setItem("id", JSON.stringify(ID));
                 window.location.href = "details.html"
             }
             else console.log('Cant');

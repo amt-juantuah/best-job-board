@@ -59,7 +59,10 @@
         </section>
     </main>
     <footer id="detail-footer"></footer>
-    <script>
+    <script type="module">
+        import { jobData } from "./data.js";
+
+
         const themeToggler = document.getElementById('theme-toggle');
         const yo = document.getElementById('yo')
         const smallWebsite = document.getElementById('detail-dot-com');
@@ -67,8 +70,11 @@
         const detailPic = document.getElementById("detail-pic");
         const detailLogo = document.getElementById('detail-logo');
         const detailFooter = document.getElementById('detail-footer');
-        const data = localStorage.getItem("data");
-        const response = JSON.parse(data);
+
+        const Alljobs = jobData();
+        const data = localStorage.getItem("id");
+        const ID = JSON.parse(data);
+        const response = Alljobs.find(job => job.id === ID)
         const container = document.getElementById('detail-container');
         let content = `
                         <div id="detail-covering-card" class="detail-covering-card">
