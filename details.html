@@ -60,9 +60,6 @@
     </main>
     <footer id="detail-footer"></footer>
     <script type="module">
-        import { jobData } from "./data.js";
-
-
         const themeToggler = document.getElementById('theme-toggle');
         const yo = document.getElementById('yo')
         const smallWebsite = document.getElementById('detail-dot-com');
@@ -71,7 +68,10 @@
         const detailLogo = document.getElementById('detail-logo');
         const detailFooter = document.getElementById('detail-footer');
 
-        const Alljobs = jobData();
+        const fileOnSystem = "./data.json";
+        const fetchData = await fetch(fileOnSystem);
+        const Alljobs = await fetchData.json();
+
         const data = localStorage.getItem("id");
         const ID = JSON.parse(data);
         const response = Alljobs.find(job => job.id === ID)
