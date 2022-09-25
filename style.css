@@ -16,6 +16,7 @@
     --color-dark-grey: #6E8098;
     --color-yo: #5964e0;
     --color-filter: #6E8098;
+ 
 
     --card-border-radius: 6px;
     --card-width: 330px;
@@ -457,14 +458,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* transition: margin-top 3000ms; */
 }
 
 .theme-toggler span.active{
-    background: var(--color-light-grey);
-    color: white;
+    background: rgba(255, 255, 255, 0.518);
     border-radius:var(--border-radius-1);
-    outline: 2px solid white;
-    border: 1px solid white;
+    /* outline: 2px solid rgba(255, 255, 255, 0.131); */
+    border: 2px solid rgba(255, 255, 255, 0.508);
+    margin-top: 10px;
+    transition: margin-top 500ms;
 }
 
 .mob-show {
